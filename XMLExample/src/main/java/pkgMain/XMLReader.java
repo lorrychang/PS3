@@ -1,11 +1,12 @@
 package pkgMain;
 
 import java.io.File;
-
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
+
+import org.springframework.core.serializer.Deserializer;
 
 import pkgLibrary.Book;
 import pkgLibrary.Catalog;
@@ -78,7 +79,7 @@ public class XMLReader {
 		basePath = basePath + "\\src\\main\\resources\\XMLFiles\\Books.xml";
 		File file = new File(basePath);
 
-		System.out.println(file.getAbsolutePath());
+		System.out.println((file).getAbsolutePath());
 		try {
 			JAXBContext jaxbContext = JAXBContext.newInstance(Catalog.class);
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
