@@ -42,7 +42,6 @@ public class CatalogTest {
 		assertEquals(cat.getId() , b1.getId());
 	}
 
-
 	@Test
 	public void test1(){
 		Catalog cat = null;
